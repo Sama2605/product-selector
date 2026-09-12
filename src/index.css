@@ -1,3 +1,12 @@
+:root {
+  --color-primary: #1428a0;
+  --color-text: #000;
+  --color-text-muted: #8b8b8b;
+  --color-text-secondary: #555;
+  --color-surface: #fff;
+  --color-background: #f8f8f8;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,6 +19,8 @@ body {
 
 body {
   min-width: 320px;
+  background-color: var(--color-background);
+  font-family: "SamsungOne", Arial, sans-serif;
 }
 
 button,
