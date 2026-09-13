@@ -80,9 +80,11 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         </span>
       </div>
 
-      <p className="product-card__installment">
-        {installmentPrice} zł x {installmentNumber} rat
-      </p>
+      {installmentPrice !== undefined && installmentNumber !== undefined && (
+        <p className="product-card__installment">
+          {installmentPrice} zł x {installmentNumber} rat
+        </p>
+      )}
 
       <button type="button" className="product-card__button">
         WYBIERZ
