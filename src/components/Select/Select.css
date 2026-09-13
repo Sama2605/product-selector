@@ -1,0 +1,42 @@
+.select {
+  width: 249px;
+}
+
+.select__label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.select__field,
+.select__field::picker(select) {
+  appearance: base-select;
+}
+
+.select__field {
+  width: 100%;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: none;
+  cursor: pointer;
+}
+
+.select__field::picker(select) {
+  background-color: var(--color-surface);
+  border: none;
+}
+
+.select__field option {
+  padding: 10px 12px;
+  font-size: 0.75rem;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+.select__field option:hover {
+  background-color: #f3f3f3;
+}

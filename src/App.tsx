@@ -1,10 +1,11 @@
 import { products } from "./data/products";
 import { ProductGrid } from "./components/ProductGrid/ProductGrid";
+import { ProductToolbar } from "./components/ProductToolbar/ProductToolbar";
 
 function App() {
   return (
     <>
-      <div>Wybierz Product</div>
+      <ProductToolbar productsCount={products.length} />
       <main>
         <ProductGrid products={products} />
       </main>
