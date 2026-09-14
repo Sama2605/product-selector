@@ -9,9 +9,15 @@ import {
 
 type ProductToolbarProps = {
   productsCount: number;
+  searchQuery: string;
+  onSearchChange: (value: string) => void;
 };
 
-export const ProductToolbar = ({ productsCount }: ProductToolbarProps) => {
+export const ProductToolbar = ({
+  productsCount,
+  searchQuery,
+  onSearchChange,
+}: ProductToolbarProps) => {
   return (
     <section className="product-toolbar">
       <h1 className="product-toolbar__title">Wybierz urządzenie</h1>
@@ -20,6 +26,8 @@ export const ProductToolbar = ({ productsCount }: ProductToolbarProps) => {
         className="product-toolbar__search"
         type="search"
         placeholder="Search..."
+        value={searchQuery}
+        onChange={(e) => onSearchChange(e.target.value)}
       />
 
       <div className="product-toolbar__filters">

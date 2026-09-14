@@ -56,7 +56,7 @@ export const products: Product[] = [
   {
     id: 3,
     model: "WW90T654DLH",
-    name: "Pralka EcoBubble™",
+    name: "Pralka TurboWash™",
     image: product2,
     capacity: 8,
     color: "biała",
@@ -104,7 +104,7 @@ export const products: Product[] = [
   {
     id: 5,
     model: "WW15T654DP",
-    name: "Pralka EcoBubble™",
+    name: "Pralka EcoWash™",
     image: product2,
     capacity: 10.5,
     color: "biała",
@@ -127,7 +127,7 @@ export const products: Product[] = [
   {
     id: 6,
     model: "WW99T654DHL",
-    name: "Pralka EcoBubble™",
+    name: "Pralka EasyClean™",
     image: product2,
     capacity: 8,
     color: "biała",
