@@ -1,8 +1,8 @@
 export const sortOptions = [
   { value: "all", label: "Wszystkie" },
-  { value: "Popularność", label: "Popularność" },
-  { value: "Cena", label: "Cena" },
-  { value: "Pojemność", label: "Pojemność" },
+  { value: "popularity", label: "Popularność" },
+  { value: "price", label: "Cena" },
+  { value: "capacity", label: "Pojemność" },
 ];
 
 export const featureOptions = [

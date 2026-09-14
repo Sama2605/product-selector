@@ -99,7 +99,7 @@ export const products: Product[] = [
     energyClass: "D",
     priceValidFrom: "15.09.2022",
     priceValidTo: "21.09.2022",
-    price: 3199,
+    price: 2199,
   },
   {
     id: 5,
@@ -122,7 +122,7 @@ export const products: Product[] = [
     energyClass: "E",
     priceValidFrom: "15.09.2022",
     priceValidTo: "21.09.2022",
-    price: 3199,
+    price: 4199,
   },
   {
     id: 6,
@@ -145,6 +145,6 @@ export const products: Product[] = [
     energyClass: "F",
     priceValidFrom: "15.09.2022",
     priceValidTo: "21.09.2022",
-    price: 3199,
+    price: 3000,
   },
 ];

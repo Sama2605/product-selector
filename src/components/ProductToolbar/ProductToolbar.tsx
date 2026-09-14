@@ -1,7 +1,7 @@
 import "./ProductToolbar.css";
 import { Select } from "../Select/Select";
 import {
-  // sortOptions,
+  sortOptions,
   featureOptions,
   energyOptions,
   capacityOptions,
@@ -17,6 +17,8 @@ type ProductToolbarProps = {
   onEnergyClassChange: (value: string) => void;
   selectedCapacity: string;
   onCapacityChange: (value: string) => void;
+  selectedSort: string;
+  onSortChange: (value: string) => void;
 };
 
 export const ProductToolbar = ({
@@ -29,6 +31,8 @@ export const ProductToolbar = ({
   onEnergyClassChange,
   selectedCapacity,
   onCapacityChange,
+  selectedSort,
+  onSortChange,
 }: ProductToolbarProps) => {
   return (
     <section className="product-toolbar">
@@ -43,12 +47,14 @@ export const ProductToolbar = ({
       />
 
       <div className="product-toolbar__filters">
-        {/* <Select
+        <Select
           id="sort"
           label="Sortuj po:"
           placeholder="Popularność"
           options={sortOptions}
-        /> */}
+          value={selectedSort}
+          onChange={onSortChange}
+        />
 
         <Select
           id="features"

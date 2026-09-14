@@ -8,6 +8,7 @@ function App() {
   const [selectedFeature, setSelectedFeature] = useState("");
   const [selectedEnergyClass, setSelectedEnergyClass] = useState("");
   const [selectedCapacity, setSelectedCapacity] = useState("");
+  const [selectedSort, setSelectedSort] = useState("");
 
   const filteredProducts = products.filter((product) => {
     const query = searchQuery.trim().toLowerCase();
@@ -34,10 +35,23 @@ function App() {
     return searchResult && featureResult && energyClassResult && capacityResult;
   });
 
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
+    switch (selectedSort) {
+      case "price":
+        return a.price - b.price;
+
+      case "capacity":
+        return a.capacity - b.capacity;
+
+      default:
+        return 0;
+    }
+  });
+
   return (
     <>
       <ProductToolbar
-        productsCount={filteredProducts.length}
+        productsCount={sortedProducts.length}
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         selectedFeature={selectedFeature}
@@ -46,9 +60,11 @@ function App() {
         onEnergyClassChange={setSelectedEnergyClass}
         selectedCapacity={selectedCapacity}
         onCapacityChange={setSelectedCapacity}
+        selectedSort={selectedSort}
+        onSortChange={setSelectedSort}
       />
       <main>
-        <ProductGrid products={filteredProducts} />
+        <ProductGrid products={sortedProducts} />
       </main>
     </>
   );
