@@ -1,7 +1,7 @@
 import "./ProductToolbar.css";
 import { Select } from "../Select/Select";
 import {
-  sortOptions,
+  // sortOptions,
   featureOptions,
   energyOptions,
   capacityOptions,
@@ -11,12 +11,24 @@ type ProductToolbarProps = {
   productsCount: number;
   searchQuery: string;
   onSearchChange: (value: string) => void;
+  selectedFeature: string;
+  onFeatureChange: (value: string) => void;
+  selectedEnergyClass: string;
+  onEnergyClassChange: (value: string) => void;
+  selectedCapacity: string;
+  onCapacityChange: (value: string) => void;
 };
 
 export const ProductToolbar = ({
   productsCount,
   searchQuery,
   onSearchChange,
+  selectedFeature,
+  onFeatureChange,
+  selectedEnergyClass,
+  onEnergyClassChange,
+  selectedCapacity,
+  onCapacityChange,
 }: ProductToolbarProps) => {
   return (
     <section className="product-toolbar">
@@ -31,18 +43,20 @@ export const ProductToolbar = ({
       />
 
       <div className="product-toolbar__filters">
-        <Select
+        {/* <Select
           id="sort"
           label="Sortuj po:"
           placeholder="Popularność"
           options={sortOptions}
-        />
+        /> */}
 
         <Select
           id="features"
           label="Funkcje:"
           placeholder="Pokaż wszystkie"
           options={featureOptions}
+          value={selectedFeature}
+          onChange={onFeatureChange}
         />
 
         <Select
@@ -50,6 +64,8 @@ export const ProductToolbar = ({
           label="Klasa energetyczna:"
           placeholder="Pokaż wszystkie"
           options={energyOptions}
+          value={selectedEnergyClass}
+          onChange={onEnergyClassChange}
         />
 
         <Select
@@ -57,6 +73,8 @@ export const ProductToolbar = ({
           label="Pojemność:"
           placeholder="Pokaż wszystkie"
           options={capacityOptions}
+          value={selectedCapacity}
+          onChange={onCapacityChange}
         />
       </div>
 

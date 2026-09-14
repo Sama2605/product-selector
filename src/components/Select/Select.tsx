@@ -10,15 +10,29 @@ type SelectProps = {
   label: string;
   placeholder: string;
   options: SelectOption[];
+  value: string;
+  onChange: (value: string) => void;
 };
 
-export const Select = ({ id, label, placeholder, options }: SelectProps) => {
+export const Select = ({
+  id,
+  label,
+  placeholder,
+  options,
+  value,
+  onChange,
+}: SelectProps) => {
   return (
     <div className="select">
       <label className="select__label" htmlFor={id}>
         {label}
       </label>
-      <select id={id} className="select__field" defaultValue="">
+      <select
+        id={id}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        className="select__field"
+      >
         <option value="" disabled hidden>
           {placeholder}
         </option>

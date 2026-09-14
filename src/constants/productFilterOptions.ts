@@ -1,16 +1,16 @@
 export const sortOptions = [
   { value: "all", label: "Wszystkie" },
-  { value: "popularity", label: "Popularność" },
-  { value: "price", label: "Cena" },
-  { value: "capacity", label: "Pojemność" },
+  { value: "Popularność", label: "Popularność" },
+  { value: "Cena", label: "Cena" },
+  { value: "Pojemność", label: "Pojemność" },
 ];
 
 export const featureOptions = [
   { value: "all", label: "Wszystkie" },
-  { value: "addWash", label: "Drzwi AddWash" },
-  { value: "ai", label: "Panel AI Control" },
-  { value: "motor", label: "Silnik inwerterowy" },
-  { value: "screen", label: "Wyświetlacz elektroniczny" },
+  { value: "Drzwi AddWash™", label: "Drzwi AddWash" },
+  { value: "Panel AI Control", label: "Panel AI Control" },
+  { value: "Silnik inwerterowy", label: "Silnik inwerterowy" },
+  { value: "Wyświetlacz elektroniczny", label: "Wyświetlacz elektroniczny" },
 ];
 
 export const energyOptions = [
@@ -22,7 +22,7 @@ export const energyOptions = [
 
 export const capacityOptions = [
   { value: "all", label: "Wszystkie" },
-  { value: "8", label: "8kg" },
-  { value: "9", label: "9kg" },
-  { value: "10.5", label: "10.5kg" },
+  { value: "8", label: "8 kg" },
+  { value: "9", label: "9 kg" },
+  { value: "10.5", label: "10.5 kg" },
 ];
