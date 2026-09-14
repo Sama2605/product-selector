@@ -4,9 +4,15 @@ import energyBadge from "../../assets/EnergyBadge.svg";
 
 interface ProductCardProps {
   product: Product;
+  isSelected: boolean;
+  onSelect: () => void;
 }
 
-export const ProductCard = ({ product }: ProductCardProps) => {
+export const ProductCard = ({
+  product,
+  isSelected,
+  onSelect,
+}: ProductCardProps) => {
   const {
     model,
     name,
@@ -86,8 +92,14 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         </p>
       )}
 
-      <button type="button" className="product-card__button">
-        WYBIERZ
+      <button
+        type="button"
+        className={`product-card__button ${
+          isSelected ? "product-card__button--selected" : ""
+        }`}
+        onClick={onSelect}
+      >
+        {isSelected ? "WYBRANE" : "WYBIERZ"}
       </button>
     </article>
   );
