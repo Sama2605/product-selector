@@ -94,7 +94,7 @@ export const products: Product[] = [
       // "Drzwi AddWash™",
       "Panel AI Control",
       // "Silnik inwerterowy",
-      // "Wyświetlacz elektroniczny",
+      "Wyświetlacz elektroniczny",
     ],
     energyClass: "D",
     priceValidFrom: "15.09.2022",
