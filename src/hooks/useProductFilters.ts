@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Product } from "../types/product";
 
-export const usePrdoductFilters = (products: Product[]) => {
+export const useProductFilters = (products: Product[]) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFeature, setSelectedFeature] = useState("");
   const [selectedEnergyClass, setSelectedEnergyClass] = useState("");

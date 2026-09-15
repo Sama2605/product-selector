@@ -1,8 +1,10 @@
 import { products } from "./data/products";
 import { ProductGrid } from "./components/ProductGrid/ProductGrid";
 import { ProductToolbar } from "./components/ProductToolbar/ProductToolbar";
-import { usePrdoductFilters } from "./hooks/useProductFilters";
+import { useProductFilters } from "./hooks/useProductFilters";
 import { useState } from "react";
+import { useShowMore } from "./hooks/useShowMore";
+import { ShowMoreButton } from "./components/ShowMoreButton/ShowMoreButton";
 
 function App() {
   const {
@@ -17,7 +19,13 @@ function App() {
     setSelectedCapacity,
     selectedSort,
     setSelectedSort,
-  } = usePrdoductFilters(products);
+  } = useProductFilters(products);
+
+  const {
+    visibleItems: visibleProducts,
+    hasMore,
+    showMore,
+  } = useShowMore(sortedProducts);
 
   const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
 
@@ -38,10 +46,12 @@ function App() {
       />
       <main>
         <ProductGrid
-          products={sortedProducts}
+          products={visibleProducts}
           selectedProduct={selectedProduct}
           onProductSelect={setSelectedProduct}
         />
+
+        {hasMore && <ShowMoreButton onClick={showMore} />}
       </main>
     </>
   );
